@@ -24,37 +24,6 @@ function next(){
 function prev(){
     sliderMain.prepend(item[item.length-1])
 }
-
-// signup and login
-
-// let login_btn= document.getElementById("login");
-// let status= localStorage.getItem("status");
-
-// if(status=="login"){
-//     login_btn.addEventListener("click",(login));
-// }
-// else{
-//    login_btn.addEventListener("click",logout);
-
-// }
-
-
-// function login(){
-//     console.log("yes")
-//     window.location.href="login.html"
-// }
-// function logout(){
-//     localStorage.removeItem("username");
-//     localStorage.removeItem("token");
-// }
-
-// let showUser= document.querySelector("#username");
-// let data = localStorage.getItem("username");
-
-// if(data){
-//     showUser.innerHTML=data
-// }
-
 let showUser= document.querySelector("#user_box");
 let data= localStorage.getItem("username");
 
