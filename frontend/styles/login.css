@@ -12,7 +12,7 @@
     border: 1px solid black;
     width: auto;
 }
-#logo_box>img{
+#logo_box> a img{
     height:70px;
     width: 200px;
 }

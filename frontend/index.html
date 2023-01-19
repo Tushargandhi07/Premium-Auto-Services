@@ -1,13 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <h1>Home Page</h1>
-    
+    <div id="code_box">
+        <h1 id="code">NEW USER SAVE 15% - USE CODE | JAN23</h1>
+    </div>
+
+    <div id="nav">
+        <div id="logo_box">
+            <img src="https://i.ibb.co/4S6M1js/premiun-auto-parts-logo.png" alt="website logo">
+        </div>
+        <div id="search_box">
+            <input type="text" id="search_input" placeholder="search products here">
+            <button type="submit" id="search"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="user_box">
+            <h4 id="username"></h4>
+            <button id="signup"><a href="login.html">login</a></button>
+            <button id="signup"><a href="signup.html">Sign up</a></button>
+            <button style="font-size:24px" id="cart"><a href="cart.html"> 1<i class="fa fa-shopping-cart"></i></a></button>
+        </div>
+    </div>
+
+    <div id="top_box">
+        <div id="top_innerbox">
+            <div id="top_box_info">
+                <h1>Valvoline Oil Change Bundles</h1>
+                <h3> Full Synthetic starting at $39.99 + FREE Gumout Regane Fuel System Cleaner.</h3>
+                <button>Add to Cart</button>
+            </div>
+            <div id="top_box_banner">
+                <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/2022/11/Redesign_HP-Hero-eSpot-DESKTOP-745X308_Winter_2022.jpg" alt="valvoline banner">
+            </div>
+        </div>
+        <div id="gift_card">
+            <div id="gift_card_scheme">
+                <h2>Rain-X: $15 Gift Card</h2>
+                <p>By mail on 2 Rain-X Silicone AdvantEdge Maximun Performance Beam wiper blades.</p>
+            </div>
+            <div id="gift_card_scheme">
+                <h2>DieHard: $10 Gift Card</h2>
+                <p>By mail when you buy any DieHard Platinum automotive battery.</p>
+            </div>
+            <div id="gift_card_scheme">
+                <h2>Sylvania: $15 Gift Card</h2>
+                <p>By mail on a Sylvania SilverStar ULTRA Twin-Pack or Single Pack headlights.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="top_category">
+        <p><span id="bold">TOP</span> CATEGORIES</p>
+        <hr>
+        <div id="category_box">
+            <div id="category_card">
+                <div id="category_img">
+                    <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/landing/battery/diehard/HP-Category-Grid-DieHard-Gold-95x95.jpg" alt="battery image">
+                </div>
+                <p>Batteries</p>
+            </div>
+            <div id="category_card">
+                <div id="category_img">
+                    <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/12-AC-Seat-Covers.jpg" alt="image">
+                </div>
+                <p>Seat Covers</p>
+            </div>
+            <div id="category_card">
+                <div id="category_img">
+                    <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/Top-Categories-14-Floor-Mats.png" alt="image">
+                </div>
+                <p>Floor Mats</p>
+            </div>
+            <div id="category_card">
+                <div id="category_img">
+                    <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/hm-topcat-wipers.jpg" alt="image">
+                </div>
+                <p>Wipers</p>
+            </div>
+            <div id="category_card">
+                <div id="category_img">
+                    <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/TC-Brakes.jpg" alt="image">
+                </div>
+                <p>Brake Pads</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mid_innerbox">
+        <div id="mid_box_info">
+            <h1>Premium Auto Parts</h1>
+            <h3> The upgraded app is here! View and use your Perks Bucks and Gas Rewards easily, right from the home screen. Download Now!</h3>
+        </div>
+        <div id="mid_box_banner">
+            <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/2022/12/homepage-phone2.png" alt="image">
+        </div>
+    </div>
+
+    <!-- slider -->
+
+    <div class="slider_box">
+        <p><span id="bold">RECENTLY VIEWED</span>  AND RELATED ITEMS</p>
+        <section class="product">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="slider-wrap">
+                        <div class="slider-main" id="slider-main">
+                            <div class="item">
+                                <div class="text"><img
+                                        src="https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/N3001/large/11970992_mgr_g181302_pri_larg.jpg"
+                                        alt="">
+                                    <div id="description">
+                                        <p>$7.99</p>
+                                        <p>Meguiars</p>
+                                        <p>Whole Car Air Freshner</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text"><img
+                                        src="https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/N4014E/large/11964859_arm_18951_pri_larg.jpg"
+                                        alt="">
+                                        <div id="description">
+                                            <p>$4.29</p>
+                                            <p>Armor All</p>
+                                            <p>Whole Car Air Freshner</p>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text"><img
+                                        src="https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/2916/large/2040433_eny_35752_pri_larg.jpg"
+                                        alt="">
+                                        <div id="description">
+                                            <p>$109</p>
+                                            <p>Die Hard</p>
+                                            <p>Battery: 7586DT group size</p>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text"><img
+                                        src="https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/1413/thumb/12443552_wth_w536_pri_thmb.jpg"
+                                        alt="">
+                                        <div id="description">
+                                            <p>$79.99</p>
+                                            <p>WeatherTech</p>
+                                            <p>Floor Mat, Black, rubber</p>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text"><img
+                                        src="https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/2916/large/2130021_eny_650_pri_larg.jpg"
+                                        alt="">
+                                        <div id="description">
+                                            <p>$109</p>
+                                            <p>Die Hard</p>
+                                            <p>Battery: 65 group size</p>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text"><img
+                                        src="https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/1413/thumb/12067850_cov_76379147_pri_thmb.jpg"
+                                        alt="">
+                                        <div id="description">
+                                            <p>$64.99</p>
+                                            <p>Cover Craft</p>
+                                            <p> Custom floor Mats</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-area">
+                            <button type="button" class="slider-btn" onclick="prev()"><i class="fa fa-caret-left"
+                                    aria-hidden="true"></i></button>
+                            <button type="button" class="slider-btn" onclick="next()"><i class="fa fa-caret-right"
+                                    aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <div id="bottom">
+        <div id="bottom_part">
+            <p>TOP REPLACEMENT PARTS</p>
+            <ul>
+                <li>Brake Pads & Shoes</li>
+                <li>Brake Rotors</li>
+                <li>Alternators</li>
+                <li>Water Pumps</li>
+                <li>Show All</li>
+            </ul>
+        </div>
+        <div id="bottom_part">
+            <p>POPULAR MAKES</p>
+            <ul>
+               <li>Ford Parts</li>
+               <li>Chevrolet Parts</li>
+               <li>Honda Parts</li>
+               <li>Dodge Parts</li>
+               <li>Show All</li>
+            </ul>
+        </div>
+        <div id="bottom_part">
+            <p>ROUTINE MAINTENANCE PARTS</p>
+            <ul>
+                <li>Spark Plugs</li>
+                <li>Car Batteries</li>
+                <li>Oil Filters</li>
+                <li>Motor Oil</li>
+                <li>Show All</li>
+            </ul>
+        </div>
+        <div id="bottom_part">
+            <p>SHOP BY</p>
+            <ul>
+                <li>Manufacturer Brand</li>
+                <li>Vehicle Make / Model</li>
+                <li>Performance Parts</li>
+                <li>Lawn & Garden</li>
+                <li>Boating & Marine</li>
+                <li>Motorcycle & ATV</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="fotter_part">
+            <p>CUSTOMER SUPPORT</p>
+            <hr>
+            <ul>
+                <li>Accessibility Statement</li>
+                <li>Contact Us</li>
+                <li>Forgot Password</li>
+                <li>Help Desk</li>
+                <li>In Store Pickup</li>
+                <li>In Store Services</li>
+                <li>Order Tracking</li>
+                <li>Recall Information</li>
+                <li>Return Policy</li>
+                <li>Same Day Delivery</li>
+                <li>UBER Driver Rewards</li>
+            </ul>
+        </div>
+        <div id="fotter_part">
+            <p>ABOUT US</p>
+            <hr>
+            <ul>
+                <li>Affiliate Program</li>
+                <li>Career Opportunities</li>
+                <li>Corporate Information</li>
+                <li>Gift Cards</li>
+                <li>Investor Relations</li>
+                <li>2020 Annual Report</li>
+                <li>Annual Meeting Materials</li>
+                <li>Safety Data Sheets (SDS)</li>
+                <li>Press</li>
+                <li>Store Locator</li>
+            </ul>
+        </div>
+        <div id="fotter_part">
+            <p>PROFESSIONAL SHOPS</p>
+            <hr>
+            <ul>
+                <li>MyAdvance</li>
+                <li>Online Parts Ordering</li>
+                <li>TechNet Professional</li>
+                <li>Technical Training</li>
+                <li>Interactive Vehicle Animations</li>
+                <li>Promotions & Rewards</li>
+                <li>Annual Meeting Materials</li>
+                <li>Shop Solutions</li>
+                <li>Find My Mechanic</li>
+            </ul>
+        </div>
+        <div id="fotter_part">
+            <p>FOLLOW US</p>
+            <hr>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Pinterest</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+    </div>
+
 </body>
+<script src="scripts/home.js"></script>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
