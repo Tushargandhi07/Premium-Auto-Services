@@ -45,3 +45,10 @@ async function register(event){
 
 }
 
+let showUser= document.querySelector("#username");
+let data = localStorage.getItem("username");
+
+if(data){
+    showUser.innerHTML=data
+}
+
