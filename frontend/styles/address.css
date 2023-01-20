@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html, body {
+  padding: 1em 1.5em;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  width: 650px;
+  color: #6d6d6d;
+  background-color: rgb(238, 238, 238);
+}
+
+.speech-bubble {
+  position: relative;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: #eaf5fa;
+  box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+  
+}
+
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -2em;
+  left: 42.5%;
+  box-sizing: border-box;
+  border: 1em solid black;
+  border-color: transparent transparent #eaf5fa #eaf5fa;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+  box-shadow: -4px 4px 5px 0 rgba(0, 0, 0, 0.2);;
+  z-index: 0;
+}
+
+#bubble-title {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  
+}
+
+.form {
+  height: content;
+  padding: 2em 3.5em;
+  border-top: 2px solid #161515;
+  border-left: 2px solid #232222;
+  border-right: 2px solid #0c0b0b;
+  border-bottom: 2px solid #171616;
+  background-color: white;
+  border-radius: 10px;
+  margin:auto
+}
+
+#form-top {
+  border-top: 50px solid rgb(255, 225, 0);
+}
+
+#form-title {
+  font-size: 1.6em;
+  padding-bottom: 6px;
+  margin-bottom: 25px;
+  border-bottom: 1.5px solid #E8E8E8;
+}
+
+.form-header {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.form-input {
+  width: 70%;
+  height: 30px;
+  font-size: 16px;
+  padding-left: 6px;
+}
+
+.form-input, #checkbox-container {
+  margin-bottom: 15px;
+}
+
+input[type=submit] {
+  display: block;
+  -webkit-appearance: button;
+  font-size: 15px;
+  width: 135px;
+  height: 36px;
+  margin-left: 254px;
+  background-color:rgb(255, 225, 0);
+  color:black;
+  border: none;
+  border-radius: 3px;
+}
+
+/* Forces .form-input styles onto search type */
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+
+#checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.8em;
+}
+
+/* Hide the browser's default checkbox */
+#checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+#checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #FFFFFF;
+  border: #c7c7c7 1px solid;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+#checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+#checkbox-container input:checked ~ #checkmark:after {
+  display: block;
+}
+
+#checkbox-container input:checked ~ #checkmark {
+  display: block;
+  background-color: rgb(255, 225, 0)
+}
+
+/* Style the checkmark/indicator */
+#checkbox-container #checkmark:after {
+  left: 11px;
+  top: 5px;
+  width: 5px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#shipping-address-show {
+  display: none;
+}

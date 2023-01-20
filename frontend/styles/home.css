@@ -31,7 +31,7 @@ body{
     height: 70px;
     width: 10%;
 }
-#logo_box>img{
+#logo_box a >img{
     height:70px;
     width: 200px;
 }

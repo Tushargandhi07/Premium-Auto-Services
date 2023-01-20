@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Page</title>
-    <link rel="stylesheet" href="styles/cart.css">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles/product.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -34,28 +34,30 @@
         </div>
     </div>
 
-    
+    <div id="result_box">
+        <h1 id="result"></h1>
+    </div>
 
-    
+    <select id="sort">
+        <option value="">sort price</option>
+        <option value="low to high">low to high</option>
+        <option value="high to low">high to low</option>
+      </select>
 
-    <div id="box">
-        <div id="container">
+    </option></input>
 
-        </div>
-        <div id="result_box">
-            <h3 id="result"></h3>
-            <h1>Total Price</h1>
-            <h1 id="cart_total"></h1>
-            <input type="text" placeholder="apply promo code" id="couponCode">
-            <button id="promo">ok</button>
-            <br>
-            <br>
-            <br>
-            <button id="pay">Proceed To Pay</button>
+    <div id="container">
+        <div>
+            <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/1040/thumb/12080776_cov_ssc1248camb_pri_thmb.jpg"
+                alt="">
+            <h1>$9</h1>
+            <h3>check</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, delectus?</p>
+            <button>Add to Cart</button>
         </div>
     </div>
 
 </body>
-<script src="scripts/cart.js"></script>
 
 </html>
+<script src="scripts/product.js"></script>

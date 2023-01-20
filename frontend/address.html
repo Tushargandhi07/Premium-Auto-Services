@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="styles/address.css">
+</head>
+
+<body>
+
+    <form class="form" id="form-top" method="get">
+        <div id="form-title">Shipping Address</div>
+
+        <div class="form-header">Apartment/House no.</div>
+        <input type="search" class="form-input" id="billing_addrs_1" placeholder="enter house no." required></input>
+
+        <div class="form-header">Street/Road name</div>
+        <input type="text" class="form-input" id="billing_addrs_2" placeholder="enter street name" required></input>
+
+        <div class="form-header">Locality</div>
+        <input type="text" class="form-input" id="billing_suburb" placeholder="enter locality" required></input>
+
+        <div class="form-header">State</div>
+        <input class="form-input" id="billing_state" placeholder="enter state" required></input>
+
+        <div class="form-header">Pincode</div>
+        <input class="form-input" id="billing_postcode" placeholder="enter pincode" required></input>
+
+        <label id="checkbox-container">
+            <input type="checkbox" id="checkbox" checked>
+            <span id="checkmark"></span>
+            Ship to my billing address
+        </label>
+
+        <div id="shipping-address-show">
+            <div id="form-title">Shipping Address</div>
+
+            <div class="form-header">Apartment/house no.</div>
+            <input type="search" class="form-input" id="shipping_addrs_1"
+                placeholder="Search address here.jj.."></input>
+
+            <div class="form-header">Address Line 2</div>
+            <input type="text" class="form-input" id="shipping_addrs_2"></input>
+
+            <div class="form-header">Suburb</div>
+            <input type="text" class="form-input" id="shipping_suburb"></input>
+
+            <div class="form-header">State</div>
+            <input class="form-input" id="shipping_state"></input>
+
+            <div class="form-header">Postcode</div>
+            <input class="form-input" id="shipping_postcode"></input>
+        </div>
+
+        <input class="btn" type="submit">
+
+    </form>
+
+</body>
+
+</html>
+<script src="scripts/address.js"></script>

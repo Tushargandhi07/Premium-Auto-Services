@@ -40,3 +40,28 @@ if(data){
     });
     showUser.append(button);
 }
+
+let input= document.getElementById("search_input");
+let BTN= document.getElementById("search");
+
+BTN.addEventListener("click",()=>{
+    localStorage.setItem("search",input.value);
+    window.location.href="product.html"
+})
+
+showcart();
+async function showcart() {
+    let userid= localStorage.getItem("userID");
+    let token= localStorage.getItem("token");
+    let cart= document.querySelector("#cart");
+    let data = await fetch(`http://localhost:4440/cart/get/${userid}`, {
+        method: "GET",
+        headers: {
+            "Content-type": "application/json",
+            "authorization":token
+        }
+    });
+    let new_data = await data.json();
+    cart.innerText = new_data.length
+}
+

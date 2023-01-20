@@ -1,0 +1,116 @@
+body{
+    background-color: rgb(238, 238, 238);
+}
+#code_box{
+    margin-top:-10px;
+    display:flex;
+    height:60px;
+    text-align: center;
+    background-color: rgb(255, 225, 0);
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 15px;
+}
+
+
+#nav{
+    display:flex;
+    height:auto;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(39, 39, 39);
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+#logo_box{
+    height: 70px;
+    width: 10%;
+}
+#logo_box a >img{
+    height:70px;
+    width: 200px;
+}
+#search_box{
+    width: 60%;
+}
+#search_input{
+    height: 40px;
+    width: 80%;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+#search{
+    height: 45px;
+    padding: 10px;
+    width: 50px;
+    border-radius: 4px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+#user_box{
+    height: 40px;
+    display: flex;
+    color:white;
+    width: 35%;
+    justify-content: space-between;
+    padding-right: 2%;
+}
+#user_box button{
+    width: 100px;
+    background-color: rgb(60, 59, 59);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+#user_box button a{
+    color: white;
+}
+
+#user_box>h4{
+    margin-top: 10px;
+}
+#user_box button a:hover{
+    color:yellow;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    width:70%;
+    margin: auto;
+  }
+  #container>div{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  #container>div>h1{
+    color: red;
+  }
+  #container>div>button{
+    background-color: rgb(255, 225, 0);
+    padding: 10px 35px;
+    font-weight: bold;
+    border:none;
+    border-radius: 10px;
+  }
+#result_box{
+    text-align: center;
+    margin:50px 0px;
+}
+#sort{
+    height: 40px;
+    width: 150px;
+    margin-left: 223px;
+    border: 1px black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

@@ -32,7 +32,8 @@ productRouter.get("/all",async(req,res)=>{
         query.description = {$regex:description, $options:"i"}
     }
     try {
-        const data= await ProductModel.find(query).sort({"name": -1}).skip(skips).limit(limit);;
+        // const data= await ProductModel.find(query).sort({"name": -1}).skip(skips).limit(limit);;
+        const data= await ProductModel.find(query);
         res.send(data);
     } catch (err) {
         console.log("Something went wrong");
