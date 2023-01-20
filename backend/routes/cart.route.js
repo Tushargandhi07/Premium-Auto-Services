@@ -11,21 +11,32 @@ cartRouter.get("/get/:id", async (req, res) => {
         res.send(data)
     } catch (error) {
         console.log(error);
-        res.send("Something went wrong")
+        res.send({"msg":"Something went wrong"});
     }
 });
+
 
 cartRouter.post("/create", async (req, res) => {
     //verify token
     const payload = req.body;
+    const {_id}= req.body;
+    const{userID}= req.headers;
+
+    const product= await CartModel.find({_id,userID});
+    if(product.length>0){
+        res.send({ "msg": "Something went wrong" })
+    }
+    else{
+    
     try {
         const new_note = new CartModel(payload);
         await new_note.save();
-        res.send("Item added to Cart.");
+        res.send({"msg":"Item added to Cart."});
     } catch (error) {
         console.log(error);
         res.send({ "msg": "Something went wrong" });
     }
+}
 });
 
 cartRouter.patch("/update/:id", async (req, res) => {
@@ -43,7 +54,7 @@ cartRouter.patch("/update/:id", async (req, res) => {
         else {
             await CartModel.findByIdAndUpdate({ _id: ID }, payload);
             console.log("Cart has Updated.");
-            res.send("Updated");
+            res.send({ "msg": "Updated" });
         }
     } catch (error) {
         res.send({ "msg": "Something went wrong" });

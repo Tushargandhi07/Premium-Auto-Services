@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="styles/payment.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="finishtitle"><span>Finish</span> Purchase!</div>
+    <div class="container">
+      <div class="heading">Choose Payment Method</div>
+      <div class="choose">
+       <div id="active" class="visa active"><input id="visa" name="choose" type="radio"> <label for="visa"><img src="https://cryptonews.pl/wp-content/uploads/2017/07/Visa.jpeg" alt="visa" /> </label></div>
+        <div class="maestro"><input id="maestro" name="choose" type="radio"> <label for="maestro"><img src="https://www.mastercard.pl/pl-pl/klienci-indywidualni/produkty/karty-debetowe-mastercard/karta-maestro/_jcr_content/contentpar/herolight/image.adaptive.319.low.png/1493218561825.png" alt="visa" /></label></div>
+        <div class="paypal"><input id="paypal" name="choose" type="radio"> <label for="paypal"><img src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_960_720.png" alt="visa" /> </label></div>
+      </div>
+      <form autocomplete="off" class="payform" action="#">
+        <input type="text" name="name" class="accname" placeholder="Account Holder Name">
+        <input type="text" name="cardnumber" class="cardnumber" placeholder="Credit Card Number">
+        <input type="text" name="cvv" class="cvv" placeholder="CVV/CVV2">
+        <input type="reset" class="reset" value="Cancel" id="cancel">
+        <input type="submit" class="submit" value="Submit" id="done">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+<script src="scripts/payment.js"></script>

@@ -24,6 +24,7 @@ async function login(event) {
         if (new_data.msg == "Login Done") {
             localStorage.setItem("token",new_data.token)
             localStorage.setItem("username",new_data.username)
+            localStorage.setItem("userID",new_data.userID)
             alert("Login Successful");
             window.location.href = "index.html";
         } else {

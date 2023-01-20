@@ -6,7 +6,8 @@ const cartSchema = mongoose.Schema({
     description:String,
     name:String,
     warranty:String,
-    userID:String
+    userID:String,
+    quantity:String
 });
 
 const CartModel= mongoose.model("cart",cartSchema);
