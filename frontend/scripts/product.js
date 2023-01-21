@@ -2,6 +2,8 @@
 let new_search = localStorage.getItem("search");
 let Data;
 
+// search the data
+
 async function show() {
     let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/products/all?description=${new_search}`, {
         method: "GET",
