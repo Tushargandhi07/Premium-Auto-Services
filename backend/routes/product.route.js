@@ -42,6 +42,34 @@ productRouter.get("/all",async(req,res)=>{
     }
 });
 
+productRouter.delete("/delete/:id", async (req, res) => {
+    //verify token
+    const ID = req.params.id;
+    try {
+        await ProductModel.findByIdAndDelete({ _id: ID });
+        console.log("Item Deleted from database");
+        res.send({"msg":"Deleted"});
+    } catch (err) {
+        res.send({ "msg": "Something went wrong" })
+    }
+});
+
+
+productRouter.patch("/update/:id", async (req, res) => {
+    //verify token
+    let payload= req.body;
+    const ID = req.params.id;
+    try {
+        await ProductModel.findByIdAndUpdate({ _id: ID },payload);
+        console.log("Item Updated from database");
+        res.send({"msg":"Updated"});
+    } catch (err) {
+        res.send({ "msg": "Something went wrong" })
+    }
+});
+
+
+
 
 // productRouter.post("/createmany",async(req,res)=>{
 //     try {

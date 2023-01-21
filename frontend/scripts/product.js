@@ -50,26 +50,31 @@ function displayData(data) {
     });
 };
 async function add_element(data) {
-    data.quantity = 1;
-    let token = localStorage.getItem("token");
-    let userID = localStorage.getItem("userID");
-    let res = await fetch("http://localhost:4440/cart/create", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-type": "application/json",
-            "authorization": token,
-            "userID": userID
+    try {
+        data.quantity = 1;
+        let token = localStorage.getItem("token");
+        let userID = localStorage.getItem("userID");
+        let res = await fetch("http://localhost:4440/cart/create", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-type": "application/json",
+                "authorization": token,
+                "userID": userID
+            }
+        });
+        let new_data = await res.json();
+        if (new_data.msg == "Item added to Cart.") {
+            swal("Added to cart", "", "success");
         }
-    });
-    let new_data = await res.json();
-    if (new_data.msg == "Item added to Cart.") {
-        swal("Added to cart", "", "success");
+        else {
+            swal("Item already in Cart", "", "warning")
+        };
+        showcart();
     }
-    else {
-        swal("Item already in Cart", "", "warning")
-    };
-    showcart();
+    catch (err) {
+        swal("Please login First","","warning")
+    }
 }
 
 let showUser = document.querySelector("#user_box");
@@ -122,7 +127,7 @@ sort.addEventListener('change', (event) => {
         let sort_data = Data.sort((a, b) => { return a.price - b.price })
         displayData(sort_data)
     }
-    else{
+    else {
         let sort_data = Data.sort((a, b) => { return b.price - a.price })
         displayData(sort_data)
     }

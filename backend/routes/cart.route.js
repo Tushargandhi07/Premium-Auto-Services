@@ -45,8 +45,11 @@ cartRouter.patch("/update/:id", async (req, res) => {
     const ID = req.params.id;
     const note = await CartModel.findOne({ _id: ID });
     const userID_in_note = note.userID;
+
     const userID_making_req = req.body.userID;
 
+
+    
     try {
         if (userID_in_note !== userID_making_req) {
             res.send({ "msg": "You are not authorized" })
@@ -60,6 +63,7 @@ cartRouter.patch("/update/:id", async (req, res) => {
         res.send({ "msg": "Something went wrong" });
     }
 });
+
 
 cartRouter.delete("/delete/:id", async (req, res) => {
     //verify token

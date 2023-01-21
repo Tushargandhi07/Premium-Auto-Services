@@ -15,6 +15,7 @@ let obj={
       "name": "DieHard Platinum",
       "warranty": "4 yr replacement if defective"
     },
+    
     {
       "image": "https://shop.advanceautoparts.com/wcsstore/CVWEB/staticproductimage/2916/thumb/12257813_dbp_35rp_pri_thmb.jpg",
       "price": "229",

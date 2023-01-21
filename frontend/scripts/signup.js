@@ -20,7 +20,7 @@ async function register(event){
         pass
     }
     if(payload.pass!=confirm_password){
-        alert("Confirm password must be same.");
+        swal("Confirm password must be same.","","warning");
         return;
     }
     else{
@@ -33,10 +33,10 @@ async function register(event){
         }).then(res=>res.json())
         .then(res=>{
             if(res.msg=="Email Already registered."){
-                alert("Email Already registered.");
+                swal("Email Already registered.","","warning");
             }
             else{
-                alert("Signup Successful");
+                swal("Signup Successful","","success");
                 window.location.href="login.html"
             }
         })
