@@ -1,67 +1,73 @@
 // coupon code banner
-localStorage.setItem("status","logout");
+localStorage.setItem("status", "logout");
 let code = document.getElementById("code");
 
 setInterval(() => {
     if (code.innerText == "") {
         code.innerText = "NEW USER SAVE 15% - USE CODE | JAN23"
     }
-    else{
-        code.innerText=""
+    else {
+        code.innerText = ""
     }
 }, 3000);
 
 // slider  
 
-var sliderMain=document.getElementById("slider-main");
-var item= sliderMain.getElementsByClassName("item")
+var sliderMain = document.getElementById("slider-main");
+var item = sliderMain.getElementsByClassName("item")
 
-function next(){
+function next() {
     sliderMain.append(item[0]);
     console.log(item[0])
 }
 
-function prev(){
-    sliderMain.prepend(item[item.length-1])
+function prev() {
+    sliderMain.prepend(item[item.length - 1])
 }
-let showUser= document.querySelector("#user_box");
-let data= localStorage.getItem("username");
+let showUser = document.querySelector("#user_box");
+let data = localStorage.getItem("username");
 
-if(data){
-    let name= document.querySelector("#username");
-    name.innerHTML=data;
-    let button= document.createElement("button");
-    button.innerText="Logout";
-    button.addEventListener("click",()=>{
+if (data) {
+    let name = document.querySelector("#username");
+    name.innerHTML = data;
+    let button = document.createElement("button");
+    button.innerText = "Logout";
+    button.addEventListener("click", () => {
         localStorage.removeItem("username");
-         localStorage.removeItem("token");
-         name.innerHTML="";
-         window.location.href="index.html"
+        localStorage.removeItem("token");
+        name.innerHTML = "";
+        window.location.href = "index.html"
     });
     showUser.append(button);
 }
 
-let input= document.getElementById("search_input");
-let BTN= document.getElementById("search");
+let input = document.getElementById("search_input");
+let BTN = document.getElementById("search");
 
-BTN.addEventListener("click",()=>{
-    localStorage.setItem("search",input.value);
-    window.location.href="product.html"
+BTN.addEventListener("click", () => {
+    localStorage.setItem("search", input.value);
+    window.location.href = "product.html"
 })
 
 showcart();
 async function showcart() {
-    let userid= localStorage.getItem("userID");
-    let token= localStorage.getItem("token");
-    let cart= document.querySelector("#cart");
-    let data = await fetch(`http://localhost:4440/cart/get/${userid}`, {
-        method: "GET",
-        headers: {
-            "Content-type": "application/json",
-            "authorization":token
-        }
-    });
-    let new_data = await data.json();
-    cart.innerText = new_data.length
+    let userid = localStorage.getItem("userID");
+    let token = localStorage.getItem("token");
+    let cart = document.querySelector("#cart");
+    if (token) {
+
+        let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/cart/get/${userid}`, {
+            method: "GET",
+            headers: {
+                "Content-type": "application/json",
+                "authorization": token
+            }
+        });
+        let new_data = await data.json();
+        cart.innerText = new_data.length
+    }
+    else {
+        return;
+    }
 }
 

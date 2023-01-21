@@ -24,7 +24,7 @@ async function register(event){
         return;
     }
     else{
-       await fetch("http://localhost:4440/users/register",{
+       await fetch("https://exuberant-tam-wasp.cyclic.app/users/register",{
             method: "POST",
             body: JSON.stringify(payload),
             headers:{

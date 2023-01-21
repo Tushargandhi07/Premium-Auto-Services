@@ -3,7 +3,7 @@ let new_search = localStorage.getItem("search");
 let Data;
 
 async function show() {
-    let data = await fetch(`http://localhost:4440/products/all?description=${new_search}`, {
+    let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/products/all?description=${new_search}`, {
         method: "GET",
         headers: {
             "Content-type": "application/json"
@@ -54,7 +54,7 @@ async function add_element(data) {
         data.quantity = 1;
         let token = localStorage.getItem("token");
         let userID = localStorage.getItem("userID");
-        let res = await fetch("http://localhost:4440/cart/create", {
+        let res = await fetch("https://exuberant-tam-wasp.cyclic.app/cart/create", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -107,7 +107,7 @@ async function showcart() {
     let userid = localStorage.getItem("userID");
     let token = localStorage.getItem("token");
     let cart = document.querySelector("#cart");
-    let data = await fetch(`http://localhost:4440/cart/get/${userid}`, {
+    let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/cart/get/${userid}`, {
         method: "GET",
         headers: {
             "Content-type": "application/json",
