@@ -3,6 +3,7 @@
 }
 body{
     background-color: rgb(238, 238, 238);
+    margin: 0px;
 }
 #code_box{
     margin-top:-10px;

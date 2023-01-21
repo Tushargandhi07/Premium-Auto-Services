@@ -33,6 +33,21 @@ userRouter.post("/login",async(req,res)=>{
     }
 });
 
+userRouter.get("/all",async(req,res)=>{
+    try {
+        let data = await UserModel.find();
+        res.send(data);
+    } catch (err) {
+        console.log("Something went wrong while getting the data")
+        console.log(err);
+        res.send({"msg":"Error while getting the data"})
+    }
+})
+
+
+
+
+
 userRouter.use(checkUser);
 
 userRouter.post("/register",async(req,res)=>{
@@ -54,6 +69,10 @@ userRouter.post("/register",async(req,res)=>{
         res.send({"msg":"Error while register the data."});
     }
 });
+
+
+
+
 
 
 

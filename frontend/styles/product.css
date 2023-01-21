@@ -1,5 +1,6 @@
 body{
     background-color: rgb(238, 238, 238);
+    margin: 0px;
 }
 #code_box{
     margin-top:-10px;
@@ -113,4 +114,33 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+
+/* 
+
+fotter */
+
+#footer{
+    display:flex;
+    width:100%;
+    justify-content: space-evenly;
+    background-color: rgb(60, 59, 59);
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+}
+#fotter_part{
+    line-height: 35px;
+}
+#fotter_part>p{
+    font-weight: bold;
+    margin-left: 40px;
+}
+#fotter_part > ul >li{
+    list-style: none;
+}
+#fotter_part>hr{
+    margin-left: 40px;
+    border: 1px solid rgb(255, 225, 0);
 }
