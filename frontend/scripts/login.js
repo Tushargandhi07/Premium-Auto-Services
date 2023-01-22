@@ -18,7 +18,7 @@ async function login(event) {
     }
     else {
         try {
-            let data = await fetch("http://localhost:4440/users/login", {
+            let data = await fetch("https://exuberant-tam-wasp.cyclic.app/users/login", {
                 method: "POST",
                 body: JSON.stringify(payload),
                 headers: {

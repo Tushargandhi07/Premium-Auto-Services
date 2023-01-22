@@ -47,7 +47,7 @@ function displayData(data) {
 
 async function removed(price, ele) {
     let token= localStorage.getItem("token");
-    let data = await fetch(`http://localhost:4440/cart/delete/${ele._id}`, {
+    let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/cart/delete/${ele._id}`, {
         method: "DELETE",
         headers: {
             "Content-type": "application/json",
@@ -61,7 +61,7 @@ async function removed(price, ele) {
     let quantity=Number(ele.quantity)+1;
     ele.quantity=quantity;
     let token= localStorage.getItem("token");
-    let data = await fetch(`http://localhost:4440/cart/update/${ele._id}`, {
+    let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/cart/update/${ele._id}`, {
         method: "PATCH",
         body: JSON.stringify(ele),
         headers: {
@@ -83,7 +83,7 @@ async function removed(price, ele) {
     }
     ele.quantity=quantity;
     let token= localStorage.getItem("token");
-    let data = await fetch(`http://localhost:4440/cart/update/${ele._id}`, {
+    let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/cart/update/${ele._id}`, {
         method: "PATCH",
         body: JSON.stringify(ele),
         headers: {
@@ -126,7 +126,7 @@ async function showcart() {
     let userid= localStorage.getItem("userID");
     let token= localStorage.getItem("token");
     let cart= document.querySelector("#cart");
-    let data = await fetch(`http://localhost:4440/cart/get/${userid}`, {
+    let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/cart/get/${userid}`, {
         method: "GET",
         headers: {
             "Content-type": "application/json",

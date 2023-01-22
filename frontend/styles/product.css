@@ -32,7 +32,7 @@ body{
 }
 #logo_box a >img{
     height:70px;
-    width: 200px;
+    width: 100%;
 }
 #search_box{
     width: 60%;
