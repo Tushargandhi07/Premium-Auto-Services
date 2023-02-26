@@ -25,20 +25,27 @@ function prev() {
     sliderMain.prepend(item[item.length - 1])
 }
 let showUser = document.querySelector("#user_box");
+let logout_placeholder= document.getElementById('logout_placeholder')
 let data = localStorage.getItem("username");
 
 if (data) {
+    let signup_btn= document.getElementById("signup");
+    signup_btn.classList.add('display_none');
+
+    let login_btn= document.getElementById("login");
+    login_btn.classList.add('display_none');
     let name = document.querySelector("#username");
     name.innerHTML = data;
     let button = document.createElement("button");
     button.innerText = "Logout";
+    button.classList.add("background_remove");
     button.addEventListener("click", () => {
         localStorage.removeItem("username");
         localStorage.removeItem("token");
         name.innerHTML = "";
         window.location.href = "index.html"
     });
-    showUser.append(button);
+    logout_placeholder.append(button);
 }
 
 let input = document.getElementById("search_input");
@@ -69,5 +76,52 @@ async function showcart() {
     else {
         return;
     }
+};
+
+
+let searchProduct= document.querySelectorAll(".search_product");
+
+for(let btn of searchProduct){
+    btn.addEventListener('click',(e)=>{
+        let dataID= e.target.dataset.id;
+        localStorage.setItem("search", dataID);
+        window.location.href = "product.html"
+    })
 }
 
+
+let shop_btn= document.getElementById("shop_now");
+shop_btn.addEventListener('click',()=>{
+    localStorage.setItem("search","");
+    window.location.href="product.html"
+})
+
+let search_battery= document.querySelector(".search_battery");
+search_battery.addEventListener('click',(e)=>{
+    localStorage.setItem("search","battery");
+        window.location.href = "product.html"
+});
+
+let search_seat_cover= document.querySelector(".search_seat_cover");
+search_seat_cover.addEventListener('click',(e)=>{
+    localStorage.setItem("search","seat cover");
+        window.location.href = "product.html"
+});
+
+let search_floor_mat= document.querySelector(".search_floor_mat");
+search_floor_mat.addEventListener('click',(e)=>{
+    localStorage.setItem("search","floor mat");
+        window.location.href = "product.html"
+});
+
+let search_wiper= document.querySelector(".search_wiper");
+search_wiper.addEventListener('click',(e)=>{
+    localStorage.setItem("search","wiper");
+        window.location.href = "product.html"
+});
+
+let search_brake_pad= document.querySelector(".search_brake_pad");
+search_brake_pad.addEventListener('click',(e)=>{
+    localStorage.setItem("search","brake pads");
+        window.location.href = "product.html"
+});

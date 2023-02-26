@@ -1,5 +1,7 @@
 *{
     margin-top: 0px;
+    font-family: Helvetica,sans-serif;
+
 }
 body{
     margin: 0px;
@@ -20,13 +22,17 @@ body{
     width: 200px;
 }
 
-
 #container{
-    margin-top: 50px;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 0px;
 }
+
+#container>div img{
+    height:100vh
+} 
 #form_div{
+    margin-top: 50px;
     width: 35%;
     margin-right: 10%;
 }

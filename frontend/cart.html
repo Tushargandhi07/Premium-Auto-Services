@@ -27,8 +27,9 @@
         </div>
         <div id="user_box">
             <h4 id="username"></h4>
-            <button id="signup"><a href="login.html">login</a></button>
+            <button id="login"><a href="login.html">login</a></button>
             <button id="signup"><a href="signup.html">Sign up</a></button>
+            <div id="logout_placeholder"></div>
             <button style="font-size:24px"><a href="cart.html"> <span id="cart"></span><i
                         class="fa fa-shopping-cart"></i></a></button>
         </div>
@@ -44,8 +45,12 @@
         </div>
         <div id="result_box">
             <h3 id="result"></h3>
-            <h1>Total Price</h1>
-            <h1 id="cart_total"></h1>
+            <h1>Total Bill</h1>
+            <p>Original Price <span id="total"></span></p>
+            <p>Shipping <span> Free</span></p>
+            <hr>
+            <p id="coupon_applied"></p>
+            <p>TOTAL<span id="cart_total"></span></p>
             <input type="text" placeholder="apply promo code" id="couponCode">
             <button id="promo">ok</button>
             <br>

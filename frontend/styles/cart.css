@@ -1,6 +1,12 @@
+*{
+    font-family: Helvetica,sans-serif;
+}
 body{
     background-color: rgb(238, 238, 238);
     margin: 0px;
+}
+a{
+    text-decoration: none;
 }
 #code_box{
     margin-top:-10px;
@@ -76,6 +82,21 @@ body{
 #user_box button a:hover{
     color:yellow;
 }
+.display_none{
+    display: none;
+}
+#logout_placeholder{
+    width: 100px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding-top: 9px;
+}
+
+.background_remove{
+    height: 35px;
+    margin-top: -6px;
+}
 
 #container{
     display: grid;
@@ -101,7 +122,7 @@ body{
     padding: 10px 35px;
     font-weight: bold;
     border:none;
-    border-radius: 10px;
+    border-radius: 3px;
   }
   #container>div>button:nth-child(5),
   #container>div>button:nth-child(7){
@@ -109,27 +130,42 @@ body{
     color: white;
     font-size: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-right: 10px;
     margin-left: 10px;
   }
 #result_box{
-    text-align: center;
     margin:50px 0px;
     margin-right: 100px;
     padding: 50px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: white;
-    height: 300px;
+    height: 350px;
     border-radius: 10px;
 }
-#result_box>button{
+
+#result_box>p span{
+    float: right;
+}
+#result_box>button:nth-child(9){
     padding: 10px 40px;
     background-color: rgb(60, 59, 59);
     color: white;
     border: none;
     border-radius: 4px;
 }
+#coupon_applied{
+    color:red;
+}
+#pay{
+    padding: 10px 40px;
+    background-color: rgb(60, 59, 59);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 42px;
+}
+
 #result_box>button:hover{
     color: yellow;
 }

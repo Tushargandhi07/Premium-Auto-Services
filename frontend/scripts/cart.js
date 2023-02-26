@@ -98,19 +98,26 @@ async function removed(price, ele) {
 
 let showUser= document.querySelector("#user_box");
 let data= localStorage.getItem("username");
+let logout_placeholder= document.getElementById('logout_placeholder')
 
-if(data){
-    let name= document.querySelector("#username");
-    name.innerHTML=data;
-    let button= document.createElement("button");
-    button.innerText="Logout";
-    button.addEventListener("click",()=>{
+if (data) {
+    let signup_btn= document.getElementById("signup");
+    signup_btn.classList.add('display_none');
+
+    let login_btn= document.getElementById("login");
+    login_btn.classList.add('display_none');
+    let name = document.querySelector("#username");
+    name.innerHTML = data;
+    let button = document.createElement("button");
+    button.innerText = "Logout";
+    button.classList.add("background_remove");
+    button.addEventListener("click", () => {
         localStorage.removeItem("username");
-         localStorage.removeItem("token");
-         name.innerHTML="";
-         window.location.href="index.html"
+        localStorage.removeItem("token");
+        name.innerHTML = "";
+        window.location.href = "index.html"
     });
-    showUser.append(button);
+    logout_placeholder.append(button);
 }
 
 let input= document.getElementById("search_input");
@@ -152,6 +159,8 @@ async function showcart() {
 
   function total_pr(total) {
     document.querySelector("#cart_total").innerText = `$${total}`
+    document.querySelector("#total").innerText = `$${total}`
+
   }
 
   let promo_btn= document.querySelector("#promo");
@@ -160,7 +169,10 @@ async function showcart() {
     if(code=="JAN23"){
         Total= Number(Total)-((Number(Total)*15)/100);
         swal("Promocode Applied")
-        total_pr(Total)
+        document.querySelector("#cart_total").innerText = `$${Total}`
+        document.querySelector("#coupon_applied").innerHTML = `<p>15%coupon applied <span>-$${(Number(Total)*15)/100} </span></p>`
+        document.querySelector("#discount_price").innerText = "vgvh";
+        
     }
     else{
         swal("Promocode not valid")
@@ -169,7 +181,7 @@ async function showcart() {
 
   let pay= document.querySelector("#pay");
   pay.addEventListener("click",()=>{
-    window.location.href="address.html"
+    window.location.href="payment.html"
   })
 
 
