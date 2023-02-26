@@ -1,6 +1,8 @@
 *{
     margin-top: 0px;
+    font-family: Helvetica,sans-serif;
 }
+
 body{
     margin: 0px;
 }
@@ -22,15 +24,24 @@ body{
 
 
 #container{
-    margin-top: 50px;
     display:flex;
     justify-content: space-between;
 }
+
+#container>div img{
+    height: 100vh;
+}
 #form_div{
+    height: 100vh;
+    line-height: 10px;
     width: 35%;
     margin-left: 10%;
+    padding-top: 30px;
 }
 
+#signupBox p{
+    line-height: 15px;
+}
 input {
     margin-bottom: 10px;
     padding: 10px;

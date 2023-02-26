@@ -25,18 +25,30 @@
         </div>
         <div id="user_box">
             <h4 id="username"></h4>
-            <button id="signup"><a href="login.html">login</a></button>
+            <button id="login"><a href="login.html">login</a></button>
             <button id="signup"><a href="signup.html">Sign up</a></button>
+            <div id="logout_placeholder"></div>
             <button style="font-size:24px"><a href="cart.html"> <span id="cart"></span><i class="fa fa-shopping-cart"></i></a></button>
         </div>
     </div>
+<div id="products">
+    <p id="product_title">Products</p>
+    <button class="search_product" data-id="">All</button>
+    <button class="search_product" data-id="battery">Battery</button>
+    <button class="search_product" data-id="air">Air freshner</button>
+    <button class="search_product" data-id="Floor Mat">Floor Mat</button>
+    <button class="search_product" data-id="Seat Cover">Seat Cover</button>
+    <button class="search_product" data-id="Wiper">Wiper</button>
+    <button class="search_product" data-id="car wash">Car Wash</button>
+</div>
+
 
     <div id="top_box">
         <div id="top_innerbox">
             <div id="top_box_info">
                 <h1>Valvoline Oil Change Bundles</h1>
                 <h3> Full Synthetic starting at $39.99 + FREE Gumout Regane Fuel System Cleaner.</h3>
-                <button>Add to Cart</button>
+                <button id="shop_now">Shop Now</button>
             </div>
             <div id="top_box_banner">
                 <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/2022/11/Redesign_HP-Hero-eSpot-DESKTOP-745X308_Winter_2022.jpg" alt="valvoline banner">
@@ -62,31 +74,31 @@
         <p><span id="bold">TOP</span> CATEGORIES</p>
         <hr>
         <div id="category_box">
-            <div id="category_card">
+            <div id="category_card" class="search_battery">
                 <div id="category_img">
                     <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/landing/battery/diehard/HP-Category-Grid-DieHard-Gold-95x95.jpg" alt="battery image">
                 </div>
                 <p>Batteries</p>
             </div>
-            <div id="category_card">
+            <div id="category_card" class="search_seat_cover">
                 <div id="category_img">
                     <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/12-AC-Seat-Covers.jpg" alt="image">
                 </div>
                 <p>Seat Covers</p>
             </div>
-            <div id="category_card">
+            <div id="category_card" class="search_floor_mat">
                 <div id="category_img">
                     <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/Top-Categories-14-Floor-Mats.png" alt="image">
                 </div>
                 <p>Floor Mats</p>
             </div>
-            <div id="category_card">
+            <div id="category_card" class="search_wiper">
                 <div id="category_img">
                     <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/hm-topcat-wipers.jpg" alt="image">
                 </div>
                 <p>Wipers</p>
             </div>
-            <div id="category_card">
+            <div id="category_card" class="search_brake_pad">
                 <div id="category_img">
                     <img src="https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/TC-Brakes.jpg" alt="image">
                 </div>

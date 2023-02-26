@@ -2,7 +2,7 @@
 let new_search = localStorage.getItem("search");
 let Data;
 
-// search the data
+// search the data-------------------------------------------------------------------
 
 async function show() {
     let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/products/all?description=${new_search}`, {
@@ -20,10 +20,15 @@ async function show() {
         result_input.innerText = `${new_data.length} RESULT FOUND`
         Data = new_data;
     }
-    displayData(new_data);
+    let totalPages = Math.ceil(new_data.length / 9)
+    renderPagination(totalPages);
+    var arr = Data.slice(0, 9)
+    displayData(arr);
 }
 show();
 
+
+// display data-----------------------------------------------------------------------------
 function displayData(data) {
     document.querySelector("#container").innerHTML = ""
     data.forEach((ele) => {
@@ -51,6 +56,8 @@ function displayData(data) {
         document.querySelector("#container").append(div);
     });
 };
+
+// add to cart -----------------------------------------------------------------------------
 async function add_element(data) {
     try {
         data.quantity = 1;
@@ -79,23 +86,46 @@ async function add_element(data) {
     }
 }
 
+
+// show username---------------------------------------------------------------------------
+
 let showUser = document.querySelector("#user_box");
 let data = localStorage.getItem("username");
+let logout_placeholder= document.getElementById('logout_placeholder')
 
 if (data) {
+    let signup_btn= document.getElementById("signup");
+    signup_btn.classList.add('display_none');
+
+    let login_btn= document.getElementById("login");
+    login_btn.classList.add('display_none');
     let name = document.querySelector("#username");
     name.innerHTML = data;
     let button = document.createElement("button");
     button.innerText = "Logout";
+    button.classList.add("background_remove");
     button.addEventListener("click", () => {
         localStorage.removeItem("username");
         localStorage.removeItem("token");
         name.innerHTML = "";
         window.location.href = "index.html"
     });
-    showUser.append(button);
+    logout_placeholder.append(button);
 }
 
+// filter-------------------------------------------------------------------------------
+let searchProduct= document.querySelectorAll(".search_product");
+
+for(let btn of searchProduct){
+    btn.addEventListener('click',(e)=>{
+        let dataID= e.target.dataset.id;
+        localStorage.setItem("search", dataID);
+        window.location.href = "product.html"
+    })
+}
+
+
+// search-------------------------------------------------------------------------------
 let input = document.getElementById("search_input");
 let BTN = document.getElementById("search");
 
@@ -104,6 +134,8 @@ BTN.addEventListener("click", () => {
     window.location.href = "product.html";
 })
 
+
+// show cartlength --------------------------------------------------------------------
 showcart();
 async function showcart() {
     let userid = localStorage.getItem("userID");
@@ -118,20 +150,74 @@ async function showcart() {
     });
     let new_data = await data.json();
     cart.innerText = new_data.length
+    renderPagination(new_data.length)
 }
 
 
+// sort data by price-------------------------------------------------------------------
 const sort = document.querySelector('#sort');
 
 sort.addEventListener('change', (event) => {
 
     if (sort.value == "low to high") {
-        let sort_data = Data.sort((a, b) => { return a.price - b.price })
-        displayData(sort_data)
+        let sort_data = Data.sort((a, b) => { return a.price - b.price });
+        Data=sort_data
+        let totalPages = Math.ceil(sort_data.length / 9)
+        renderPagination(totalPages);
+        var arr = Data.slice(0, 9)
+        displayData(arr);
+
     }
     else {
         let sort_data = Data.sort((a, b) => { return b.price - a.price })
-        displayData(sort_data)
+        Data=sort_data
+        let totalPages = Math.ceil(sort_data.length / 9)
+        renderPagination(totalPages);
+        var arr = Data.slice(0, 9)
+        displayData(arr);
     }
 
 });
+
+
+// pagination---------------------------------------------------------------------------------------
+
+let paginationWrapper=document.querySelector(".pagination-section")
+
+function renderPagination(numOfPages) {
+
+    function asListOfButtons() {
+        let arr = [];
+        for (let i = 1; i <= numOfPages; i++) {
+            arr.push(getAsButton(i));
+        }
+        return arr.join('');
+    }
+
+    paginationWrapper.innerHTML = `
+      <div>  
+        ${asListOfButtons()}  
+        <span>> > </span>
+      </div>
+    `
+
+    let paginationButtons = document.querySelectorAll(".pagination-button");
+    for (let btn of paginationButtons) {
+        btn.addEventListener('click', (e) => {
+            let dataId = e.target.dataset.id;
+            var newarr = Data.slice((dataId - 1) * 9, 9 * dataId)
+            displayData(newarr);
+            let cr= document.getElementsByClassName('active');
+            if(cr.length>0){
+                cr[0].className=cr[0].className.replace(' active','')
+            }
+           btn.className+=" active"
+        })
+    }
+}
+
+
+
+function getAsButton(pageNumber) {
+    return `<button class="pagination-button" data-id=${pageNumber}>${pageNumber}</button>`
+}

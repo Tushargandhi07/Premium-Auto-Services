@@ -1,6 +1,9 @@
 *{
     font-family: Helvetica,sans-serif;
 }
+a{
+    text-decoration: none;
+}
 body{
     background-color: rgb(238, 238, 238);
     margin: 0px;
@@ -61,13 +64,30 @@ body{
     justify-content: space-between;
     padding-right: 2%;
 }
-#user_box button{
+#user_box button,
+#user_box>div button{
     width: 100px;
     background-color: rgb(60, 59, 59);
     color: white;
     border: none;
     border-radius: 4px;
 }
+
+
+
+#logout_placeholder{
+    width: 100px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding-top: 9px;
+}
+
+.background_remove{
+    height: 35px;
+    margin-top: -6px;
+}
+
 #user_box button a{
     color: white;
 }
@@ -78,6 +98,30 @@ body{
 #user_box button a:hover{
     color:yellow;
 }
+
+
+#product_title{
+    display:inline-block;
+    width: 100px;
+    text-align: center;
+    font-weight: bolder;
+}
+#products button{
+    border: none;
+    border-left:1px solid black;
+    height:30px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#products button:hover{
+    color: red;
+}
+
+.display_none{
+    display: none;
+}
+
 
 /* top banner */
 #top_box{
@@ -109,7 +153,7 @@ body{
     padding: 10px 35px;
     font-weight: bold;
     border:none;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 #top_box_info>button:hover{
     background-color: rgb(222, 198, 17);
@@ -167,6 +211,12 @@ body{
     text-align: center;
     padding-bottom: 10px;
 }
+#category_card:hover{
+    transform: scale(1.2);
+    transition: 0.8s;
+    cursor: pointer;
+}
+
 #category_card>p{
     font-size: 20px;
     font-weight: 900;

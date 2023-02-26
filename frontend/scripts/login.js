@@ -31,7 +31,10 @@ async function login(event) {
                 localStorage.setItem("username", new_data.username)
                 localStorage.setItem("userID", new_data.userID)
                 swal("Login Successful","","success");
-                window.location.href = "index.html";
+                const myTimeout = setTimeout(()=>{
+                    window.location.href = "index.html";
+                }, 3000);
+                
             } else {
                 swal("Wrong Credentials!","","warning");
             }

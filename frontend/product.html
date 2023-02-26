@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/product.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -27,27 +28,50 @@
         </div>
         <div id="user_box">
             <h4 id="username"></h4>
-            <button id="signup"><a href="login.html">login</a></button>
+            <button id="login"><a href="login.html">login</a></button>
             <button id="signup"><a href="signup.html">Sign up</a></button>
+            <div id="logout_placeholder"></div>
             <button style="font-size:24px"><a href="cart.html"> <span id="cart"></span><i
                         class="fa fa-shopping-cart"></i></a></button>
         </div>
     </div>
 
-    <div id="result_box">
-        <h1 id="result"></h1>
+
+    <div id="products_box">
+        <div id="filter_by_category">
+            <p id="product_title">Filter By Category</p>
+            <button class="search_product" data-id="">All</button>
+            <button class="search_product" data-id="battery">Battery</button>
+            <button class="search_product" data-id="air">Air freshner</button>
+            <button class="search_product" data-id="Floor Mat">Floor Mat</button>
+            <button class="search_product" data-id="Seat Cover">Seat Cover</button>
+            <button class="search_product" data-id="Wiper">Wiper</button>
+            <button class="search_product" data-id="car wash">Car Wash</button>
+        </div>
+
+
+        <div>
+            <div id="result_box">
+                <h1 id="result"></h1>
+            </div>
+
+            <select id="sort">
+                <option value="">Sort By Price</option>
+                <option value="low to high">Low to High</option>
+                <option value="high to low">High to Low</option>
+            </select>
+
+            </option></input>
+
+            <div id="container">
+
+            </div>
+        </div>
     </div>
 
-    <select id="sort">
-        <option value="">sort price</option>
-        <option value="low to high">low to high</option>
-        <option value="high to low">high to low</option>
-      </select>
 
-    </option></input>
-
-    <div id="container">
-       
+    <div class="pagination-section">
+        <!-- Showing Pagination Buttons in this div -->
     </div>
 
     <div id="footer">
