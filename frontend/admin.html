@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Page</title>
     <link rel="stylesheet" href="styles/admin.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -29,24 +30,41 @@
                 <button class="show-courses button-primary buttons">
                     Show Products
                 </button>
-                <button class="add-courses button-primary">
+                <button class="add-product button-primary">
                     Add Product
                 </button>
                 <hr>
-               
+
             </div>
         </div>
         <div class="columns eight main">
+            <h2 id="data-length"></h2>
             <h1>Data List</h1>
+
+            <div id="filter_box" class="display_none">
+                <label>Filter User</label>
+                <br>
+                <select id="filter">
+                    <option value="_id">ID</option>
+                    <option value="name">Username</option>
+                    <option value="email">Email</option>
+                </select>
+                <form id="filter_form">
+                    <input type="text" id="filter_input" required>
+                    <input type="submit" value="search">
+                </form>
+            </div>
             <div class="notifications-wrapper" id="notifications-wrapper">
                 <p>Couldn't Found Data! Try again after some time</p>
             </div>
             <div class="data-list-wrapper">
                 <!-- Showing Data in this div -->
+
             </div>
             <div class="pagination-section">
                 <!-- Showing Pagination Buttons in this div -->
             </div>
+
         </div>
     </div>
 
