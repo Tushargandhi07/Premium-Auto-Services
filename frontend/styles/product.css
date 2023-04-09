@@ -95,6 +95,17 @@ a {
 #user_box button a:hover {
     color: yellow;
 }
+#username{
+    position: relative;
+    left:50px
+}
+
+#user_icon{
+    position :relative;
+    top:10px;
+    left:120px;
+    display:none
+}
 
 #logout_placeholder{
     width: 100px;
@@ -117,6 +128,7 @@ a {
 #products_box {
     display: flex;
     justify-content: space-between;
+    
 }
 
 #filter_by_category {
@@ -124,7 +136,7 @@ a {
     display: flex;
     flex-direction: column;
     margin-top: 190px;
-    width: 30%;
+    width: 300px;
     margin-left: 50px;
     text-align: center;
     height: 10%;
@@ -156,6 +168,9 @@ a {
 
 #filter_by_category>button:hover {
     color: red;
+}
+#Info_box{
+    width: 90%;
 }
 
 #container {
@@ -202,13 +217,17 @@ a {
 
 #container>div>button:hover {
     color: red;
-    transform: scale(1.3);
-    transition: 0.5s;
+    transform: scale(1.1);
+    transition: 0.8s;
 }
 
 #result_box {
     text-align: center;
     margin: 50px 0px;
+}
+#loading{
+    text-align: center;
+    display: none;
 }
 
 #sort {

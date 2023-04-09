@@ -1,3 +1,5 @@
+let user_icon= document.getElementById("user_icon");
+
 // coupon code banner
 localStorage.setItem("status", "logout");
 let code = document.getElementById("code");
@@ -29,6 +31,7 @@ let logout_placeholder= document.getElementById('logout_placeholder')
 let data = localStorage.getItem("username");
 
 if (data) {
+    user_icon.style.display="block";
     let signup_btn= document.getElementById("signup");
     signup_btn.classList.add('display_none');
 
