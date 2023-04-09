@@ -82,6 +82,18 @@ a{
 #user_box button a:hover{
     color:yellow;
 }
+#username{
+    position: relative;
+    left:50px
+}
+
+#user_icon{
+    position :relative;
+    top:10px;
+    left:120px;
+    display:none
+}
+
 .display_none{
     display: none;
 }
@@ -96,6 +108,18 @@ a{
 .background_remove{
     height: 35px;
     margin-top: -6px;
+}
+
+#loading{
+    text-align: center;
+    margin: auto;
+    display: none;
+}
+#Login_first{
+    text-align: center;
+    position: relative;
+    left: 30%;
+    display: none;
 }
 
 #container{

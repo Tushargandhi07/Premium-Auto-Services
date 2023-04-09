@@ -29,6 +29,7 @@ body{
     justify-content: space-between;
     position: sticky;
     top: 0px;
+    z-index: 111;
 }
 
 #logo_box{
@@ -72,7 +73,17 @@ body{
     border: none;
     border-radius: 4px;
 }
+#username{
+    position: relative;
+    left:50px
+}
 
+#user_icon{
+    position :relative;
+    top:10px;
+    left:120px;
+    display:none
+}
 
 
 #logout_placeholder{
@@ -307,7 +318,6 @@ body{
     padding: 2px 15px;
     transition: 0.4s;
     background-color: rgb(255, 225, 0);
-
  }
  .slider-btn:hover{
     background: red;

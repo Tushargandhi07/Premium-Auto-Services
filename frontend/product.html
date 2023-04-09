@@ -27,9 +27,9 @@
             <button type="submit" id="search"><i class="fa fa-search"></i></button>
         </div>
         <div id="user_box">
-            <h4 id="username"></h4>
-            <button id="login"><a href="login.html">login</a></button>
-            <button id="signup"><a href="signup.html">Sign up</a></button>
+            <i id="user_icon" class='fa fa-user fa-lg' style='color:white;'></i><h4 id="username"></h4>
+            <button id="login"><a href="login.html">Login</a></button>
+            <button id="signup"><a href="signup.html">Signup</a></button>
             <div id="logout_placeholder"></div>
             <button style="font-size:24px"><a href="cart.html"> <span id="cart"></span><i
                         class="fa fa-shopping-cart"></i></a></button>
@@ -50,7 +50,7 @@
         </div>
 
 
-        <div>
+        <div id="Info_box">
             <div id="result_box">
                 <h1 id="result"></h1>
             </div>
@@ -60,6 +60,10 @@
                 <option value="low to high">Low to High</option>
                 <option value="high to low">High to Low</option>
             </select>
+
+            <div id="loading">
+                <h2>Loading...</h2>
+            </div>
 
             </option></input>
 

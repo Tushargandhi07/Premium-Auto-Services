@@ -1,10 +1,12 @@
 
 let new_search = localStorage.getItem("search");
 let Data;
+let loading= document.getElementById("loading");
+let user_icon= document.getElementById("user_icon");
 
 // search the data-------------------------------------------------------------------
-
 async function show() {
+    loading.style.display="block";
     let data = await fetch(`https://exuberant-tam-wasp.cyclic.app/products/all?description=${new_search}`, {
         method: "GET",
         headers: {
@@ -12,6 +14,7 @@ async function show() {
         }
     });
     let new_data = await data.json();
+    loading.style.display="none";
     let result_input = document.querySelector("#result");
     if (new_data.length < 1) {
         result_input.innerText = "NO RESULT FOUND"
@@ -94,6 +97,7 @@ let data = localStorage.getItem("username");
 let logout_placeholder= document.getElementById('logout_placeholder')
 
 if (data) {
+    user_icon.style.display="block";
     let signup_btn= document.getElementById("signup");
     signup_btn.classList.add('display_none');
 
